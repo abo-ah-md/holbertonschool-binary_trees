@@ -9,19 +9,20 @@
 */
 int binary_tree_is_full(const binary_tree_t *tree)
 {
-int check;
-check = 1;
+  int check_R, check_L;
+check_R= 1;
+check_L= 1;
 
 if (tree)
 {
 
 if (tree->left)
-check = binary_tree_is_full(tree->left);
+ check_L = binary_tree_is_full(tree->left);
 
 if (tree->right)
-check = binary_tree_is_full(tree->right);
+check_R = binary_tree_is_full(tree->right);
 
-if (check == 0)
+if (check_R == 0 || check_L == 0)
 return (0);
 
 if (!tree->left && !tree->right)
