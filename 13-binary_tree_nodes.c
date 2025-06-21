@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include "binary_trees.h"
 /**
-*binary_tree_nodes- counts the leaves of a tree
+*binary_tree_nodes- counts the nodes with at lest 1 kid of a tree
 *@tree: tree to check
-*Return: the number of the tree leaves
+*Return: the number of the nodes with at lest a kid leaves
 */
 size_t binary_tree_nodes(const binary_tree_t *tree)
 {
@@ -21,5 +21,5 @@ return (0);
 return (nodes + 1);
 }
 else
-return(0);
+return (0);
 }
