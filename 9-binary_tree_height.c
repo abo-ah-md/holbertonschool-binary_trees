@@ -13,16 +13,16 @@ int h_left;
 h_right = 0;
 h_left = 0;
 
-if(tree)
+if (tree)
 {
 
-if(tree->left)
+if (tree->left)
 h_left = 1 + binary_tree_height(tree->left);
 
-if(tree->right)
+if (tree->right)
 h_right = 1 + binary_tree_height(tree->right);
 
-if(h_right > h_left)
+if (h_right > h_left)
 return (h_right);
 else
 return (h_left);
