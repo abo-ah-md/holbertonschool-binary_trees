@@ -17,15 +17,14 @@ if (tree)
 {
 
 if (tree->left)
-h_left = 1 + binary_tree_height_new(tree->left);
- else if (tree->right)
-h_right = 1 + binary_tree_height_new(tree->right);
- else
-   return(0);
+h_left =  binary_tree_height_new(tree->left);
+if (tree->right)
+h_right =  binary_tree_height_new(tree->right);
+
 if (h_left >h_right)
-  return (h_left);
+  return (1 + h_left);
   else
-    return (h_right);
+    return (1 + h_right);
 }
 return (0);
 }
