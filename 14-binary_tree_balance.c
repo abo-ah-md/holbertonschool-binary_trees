@@ -18,10 +18,12 @@ if (tree)
 
 if (tree->left)
 h_left = 1 + binary_tree_height_new(tree->left);
-
+ else
+   return(0);
 if (tree->right)
 h_right = 1 + binary_tree_height_new(tree->right);
-
+ else
+   return(0);
 if (h_left >h_right)
   return (h_left);
   else
