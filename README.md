@@ -1,2 +1,2 @@
 # holbertonschool-binary_trees
-emplementation of binary tree in C 
+implementation of binary tree in C 
