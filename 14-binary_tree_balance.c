@@ -22,7 +22,10 @@ h_left = 1 + binary_tree_height_new(tree->left);
 if (tree->right)
 h_right = 1 + binary_tree_height_new(tree->right);
 
-return (h_left - h_right);
+if (h_left >h_right)
+  return (h_left);
+  else
+    return (h_right);
 }
 return (0);
 }
@@ -36,7 +39,7 @@ int binary_tree_balance(const binary_tree_t *tree)
 {
 if (tree)
 {
-return (binary_tree_height_new(tree));
+  return (binary_tree_height_new(tree->left) - binary_tree_height_new(tree->right));
 }
 else
 return (0);
