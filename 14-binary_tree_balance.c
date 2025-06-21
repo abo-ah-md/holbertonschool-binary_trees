@@ -17,10 +17,10 @@ if (tree)
 {
 
 if (tree->left)
-h_left = 1 + binary_tree_height(tree->left);
+h_left = 1 + binary_tree_height_new(tree->left);
 
 if (tree->right)
-h_right = 1 + binary_tree_height(tree->right);
+h_right = 1 + binary_tree_height_new(tree->right);
 
 return (h_left - h_right);
 }
