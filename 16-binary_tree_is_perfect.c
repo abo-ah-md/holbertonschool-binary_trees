@@ -23,16 +23,15 @@ size += binary_tree_size(tree->left);
 return (size);
 }
 /**
-*binary_tree_is_full - gives the balance of a
-* treechecks the tree is full or not
+*binary_tree_is_perfect - check wether a tree is perfect or not
 *@tree: tree to check
-*Return: 1 if tree is full 0 if not
+*Return: 1 if tree is perfect 0 if not
 */
-
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 int check_R, check_L;
-
+if (!tree)
+return (0);
 check_R = binary_tree_size(tree->right);
 check_L = binary_tree_size(tree->left);
 
