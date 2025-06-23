@@ -32,13 +32,12 @@ return (size);
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 int check_R, check_L;
+
 check_R = binary_tree_size(tree->right);
 check_L = binary_tree_size(tree->left);
+
 if (check_R == check_L)
-  return (1);
-else if (check_L > check_R)
-  return (1);
-else
-return(0);  
+return (1);
+
 return (0);
 }
